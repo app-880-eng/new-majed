@@ -13,3 +13,5 @@ services:
         value: "30"
       - key: COOLDOWN_HOURS
         value: "12"
+runtime: python
+pythonVersion: 3.10
