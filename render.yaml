@@ -1,6 +1,15 @@
 services:
   - type: worker
-    name: majed
-    env: python
-    buildCommand: ""
-    startCommand: "python main.py"
+    name: forex-telegram-bot
+    runtime: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PAIRS
+        value: "EURUSD,GBPUSD,USDJPY,XAUUSD"
+      - key: CHECK_EVERY_MIN
+        value: "30"
+      - key: COOLDOWN_HOURS
+        value: "12"
