@@ -1,1 +1,6 @@
-.
+services:
+  - type: worker
+    name: majed
+    env: python
+    buildCommand: ""
+    startCommand: "python main.py"
