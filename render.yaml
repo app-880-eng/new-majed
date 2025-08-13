@@ -1,17 +1,16 @@
 services:
   - type: worker
-    name: forex-telegram-bot
+    name: new-majed
     runtime: python
-    region: oregon
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
+    plan: starter
+
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python 2025.py
+
     envVars:
-      - key: PAIRS
-        value: "EURUSD,GBPUSD,USDJPY,XAUUSD"
+      - key: PYTHON_VERSION
+        value: 3.10.13
       - key: CHECK_EVERY_MIN
         value: "30"
       - key: COOLDOWN_HOURS
         value: "12"
-runtime: python
-pythonVersion: 3.10
