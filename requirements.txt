@@ -1,10 +1,11 @@
-pip>=25.2
+bip>=25.2
 setuptools>=70.0
 wheel>=0.43
 
 fastapi==0.111.*
 uvicorn[standard]==0.30.*
-requests>=2.32.3
+requests==2.32.3
 pandas==2.2.*
 numpy==2.0.*
 ta==0.11.0
+yfinance==0.2.40
